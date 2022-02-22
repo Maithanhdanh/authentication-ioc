@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+enforce-branch-name '(hotfix|bugfix|feature)/.+'
+npm run lint
+npm test
