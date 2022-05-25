@@ -18,9 +18,13 @@
   "author": "Dantis Mai <mtd.maithanhdanh@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
+    "crypto-js": "^4.1.1",
+    "decorators-utils": "^1.0.12",
     "express": "^4.17.1",
     "inversify": "^6.0.1",
     "inversify-express-utils": "^6.4.3",
+    "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
     "reflect-metadata": "^0.1.13",
     "tslib": "~2.3.0",

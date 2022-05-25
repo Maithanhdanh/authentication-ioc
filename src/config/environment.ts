@@ -5,6 +5,9 @@ const environment = {
   host: process.env.HOST || 'localhost',
   port: process.env.PORT || '5000',
   LOG_LEVEL: process.env.LOG_LEVEL || 'debug',
+  SECRET: process.env.SECRET || '',
+  AUDIENCE: process.env.AUDIENCE || 'http://authenticate-server',
+  ACCESS_TOKEN: process.env.ACCESS_TOKEN || '',
 };
 
 export default environment;
