@@ -14,7 +14,6 @@ const startServer = (container: Container): Server => {
   server.setConfig((app) => {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
-    app.disable('x-powered-by');
   });
 
   server.setErrorConfig(app => {

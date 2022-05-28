@@ -28,6 +28,7 @@ export default {
     '@controller(.*)$': `${rootDirectory}/src/controller$1`,
     '@application(.*)$': `${rootDirectory}/src/application$1`,
     '@utils(.*)$': `${rootDirectory}/src/utils$1`,
+    '@domain(.*)$': `${rootDirectory}/src/domain$1`,
   },
   reporters: [
     'default',

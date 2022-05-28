@@ -13,7 +13,7 @@ export const errorHandlerMiddleware: ErrorRequestHandler = (
   }
 
   const appError: AppError =
-    error instanceof AppError ? error : new AppError({ errorId: 'sample errorId', message: 'sample message' });
+    error instanceof AppError ? error : new AppError({ message: error?.message ? error?.message : 'Unexpected Error' });
   const response = appError.toResponse();
 
   logger.debug(`Error`, { error });
