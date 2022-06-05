@@ -7,6 +7,7 @@ moduleAlias.addAliases({
   '@controller': `${sourcePath}/controller`,
   '@application': `${sourcePath}/application`,
   '@utils': `${sourcePath}/utils`,
+  '@common': `${sourcePath}/common`,
 });
 
 import 'reflect-metadata';

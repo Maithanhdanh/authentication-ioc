@@ -1481,6 +1481,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/lodash@^4.14.182":
+  version "4.14.182"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.182.tgz#05301a4d5e62963227eaafe0ce04dd77c54ea5c2"
+  integrity sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==
+
 "@types/mime@^1":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
@@ -2415,15 +2420,13 @@ decompress-response@^3.3.0:
   dependencies:
     mimic-response "^1.0.0"
 
-decorators-utils@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/decorators-utils/-/decorators-utils-1.0.12.tgz#c9065216ef655ab2cecdafe43051ad36cd2f8f52"
-  integrity sha512-zvsX7ZXiQIJMpFQnt2/HNlJ0R5mvTeG4wVR6QUqsro5q1xtnx2PL67LL50EFf5R7aMMrpCZdKGeitO7WS13dWw==
+decorators-utils@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/decorators-utils/-/decorators-utils-1.1.0.tgz#9629ba7c8e437d8ecfe971e25ed5474ad694f598"
+  integrity sha512-M/wOgeaEOvt5l1V39VI5WDGR6uVcygOLE3I+Bs1BzuB3bRCRqg8yjB0qc+uAdVSB1nZOPoifwEbwfh/gM+t8OQ==
   dependencies:
-    glob-parent "5.1.2"
     inversify "^6.0.1"
     module-alias "^2.2.2"
-    tslib "~2.3.0"
     winston "^3.6.0"
 
 dedent@^0.7.0:
@@ -3087,7 +3090,7 @@ get-them-args@^1.3.2:
   resolved "https://registry.yarnpkg.com/get-them-args/-/get-them-args-1.3.2.tgz#74a20ba8a4abece5ae199ad03f2bcc68fdfc9ba5"
   integrity sha1-dKILqKSr7OWuGZrQPyvMaP38m6U=
 
-glob-parent@5.1.2, glob-parent@^5.1.2, glob-parent@~5.1.2:
+glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
   integrity sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
@@ -4224,7 +4227,7 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@^4.7.0:
+lodash@^4.17.21, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==

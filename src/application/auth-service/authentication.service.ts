@@ -4,9 +4,13 @@ import { inject, injectable } from 'inversify';
 import { Logger } from 'winston';
 import { GetTokenResponse } from '@controller/auth/type';
 import { TokenService } from '@domain/token/token';
+import environment from '@config/environment';
+import { decrypt } from '@utils/encryption';
+import jwt from 'jsonwebtoken';
 
 interface AuthenticationService {
   getToken(accountId: string): GetTokenResponse | void;
+  verify(token: string): boolean;
 }
 
 @logGroup()
@@ -30,6 +34,23 @@ class AuthenticationServiceImpl implements AuthenticationService {
       refreshToken,
       expiresIn: accessToken.expiresIn,
     };
+  }
+
+  public verify(token: string): boolean {
+    this.logger.info(`start verify token`);
+
+    const secret = environment.SECRET;
+    const decryptedToken = decrypt(token);
+    try {
+      jwt.verify(decryptedToken, secret);
+      this.logger.info(`valid token`);
+
+      return true;
+    } catch (err) {
+      this.logger.info(`invalid token`);
+
+      return false;
+    }
   }
 }
 

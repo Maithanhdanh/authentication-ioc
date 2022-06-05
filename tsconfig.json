@@ -26,6 +26,7 @@
       "@application/*": ["src/application/*"],
       "@utils/*": ["src/utils/*"],
       "@domain/*": ["src/domain/*"],
+      "@common/*": ["src/common/*"]
     }
   },
   "include": ["src/**/*", "__tests__/**/*"],

@@ -1,4 +1,4 @@
-import { controller, httpGet, interfaces } from 'inversify-express-utils';
+import { controller, httpHead, interfaces } from 'inversify-express-utils';
 
 export interface HealthCheckController extends interfaces.Controller {
   checkHealth(): string;
@@ -6,7 +6,7 @@ export interface HealthCheckController extends interfaces.Controller {
 
 @controller('/')
 export class HealthCheckControllerImpl implements HealthCheckController {
-  @httpGet('health')
+  @httpHead('health')
   public checkHealth(): string {
     return 'UP';
   }

@@ -29,6 +29,7 @@ export default {
     '@application(.*)$': `${rootDirectory}/src/application$1`,
     '@utils(.*)$': `${rootDirectory}/src/utils$1`,
     '@domain(.*)$': `${rootDirectory}/src/domain$1`,
+    '@common(.*)$': `${rootDirectory}/src/common$1`,
   },
   reporters: [
     'default',
