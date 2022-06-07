@@ -15,7 +15,7 @@ describe('healthCheck controller', () => {
     jest.clearAllMocks();
   });
 
-  it('should return UP', (done) => {
-    agent.get('/health').expect('UP', done);
+  it('should return UP', () => {
+    agent.head('/health').expect(200);
   });
 });

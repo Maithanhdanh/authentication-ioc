@@ -1,5 +1,6 @@
 import environment from '@config/environment';
 import { logger } from '@config/logger';
+import { errorHandlerMiddleware } from '@server/middleware/errorHandler';
 import express from 'express';
 import { Container } from 'inversify';
 import { InversifyExpressServer } from 'inversify-express-utils';
@@ -13,8 +14,11 @@ const startServer = (container: Container): Server => {
   server.setConfig((app) => {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
-    app.disable('x-powered-by');
   });
+
+  server.setErrorConfig(app => {
+    app.use(errorHandlerMiddleware)
+  })
 
   const app = server.build();
   const service = app.listen({ host, port }, () => {
